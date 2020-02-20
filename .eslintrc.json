@@ -1,0 +1,42 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended",
+    "plugin:jest/recommended",
+    "plugin:import/typescript"
+  ],
+  "plugins": ["import", "jest"],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "tsconfigRootDir": "__dirname"
+  },
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/no-non-null-assertion": 1,
+    "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }],
+    "@typescript-eslint/no-empty-function": 0,
+    "prefer-rest-params": 0,
+    "jest/no-export": 0,
+    "strict": 2,
+    "import/order": [
+      "error",
+      { "groups": ["index", "sibling", "parent", "internal", "external", "builtin"], "alphabetize": { "order": "asc" } }
+    ],
+    "import/no-duplicates": ["error", { "considerQueryString": true }],
+    "import/no-extraneous-dependencies": ["error"]
+  },
+  "overrides": [
+    {
+      // Disable `import/no-extraneous-dependencies` for test files and scripts, since
+      // the monorepo hoists all `devDependencies` to the root `package.json`.
+      "files": ["packages/**/**/*.test{,-*}.ts", "packages/**/supports/*.ts"],
+      "rules": {
+        "import/no-extraneous-dependencies": "off"
+      }
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "allowJs": false,
+    "declaration": true,
+    "declarationMap": true,
+    "module": "commonjs",
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noImplicitAny": true,
+    "outDir": "out",
+    "rootDirs": ["lib", "test"],
+    "sourceMap": true,
+    "strict": true,
+    "target": "es2018",
+    "esModuleInterop": true
+  },
+  "exclude": [
+    "node_modules",
+    "out"
+  ],
+  "formatCodeOptions": {
+    "convertTabsToSpaces": true,
+    "indentSize": 2,
+    "insertSpaceAfterCommaDelimiter": true,
+    "insertSpaceAfterFunctionKeywordForAnonymousFunctions": true,
+    "insertSpaceAfterKeywordsInControlFlowStatements": true,
+    "insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false,
+    "insertSpaceAfterSemicolonInForStatements": true,
+    "insertSpaceBeforeAndAfterBinaryOperators": true,
+    "newLineCharacter": "\n",
+    "placeOpenBraceOnNewLineForControlBlocks": false,
+    "placeOpenBraceOnNewLineForFunctions": false,
+    "tabSize": 2
+  }
+}

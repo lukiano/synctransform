@@ -1,0 +1,28 @@
+# Ignore caches
+node_modules
+.*cache
+.jest
+tsconfig.tsbuildinfo
+
+# Ignore builds
+dist
+
+# Ignore logs
+*.log
+logs/
+coverage
+
+# Ignore editor generated files
+.vscode
+.idea
+.iml
+
+# Ignore OS generated files
+.DS_Store
+
+# Ignore project generated files
+tsconfig.root.json
+packages/**/tsconfig.json
+
+# Pact artifacts
+pacts/

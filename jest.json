@@ -1,0 +1,20 @@
+{
+  "automock": false,
+  "testEnvironment": "node",
+  "roots": ["lib", "test"],
+  "transform": {
+    ".(ts|tsx)": "ts-jest"
+  },
+  "moduleFileExtensions": ["ts", "js", "json"],
+  "testRegex": "(.)*-spec\\.ts$",
+  "collectCoverage": true,
+  "coverageThreshold": {
+    "global": {
+      "statements": 90,
+      "branches": 90,
+      "functions": 90,
+      "lines": 90
+    }
+  },
+  "coverageReporters": ["text", "text-summary", "lcov"]
+}
